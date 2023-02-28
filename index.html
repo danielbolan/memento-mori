@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memento Mori</title>
+
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="flex-column" id="text-copy">
+            <h1>Memento Mori.</h1>
+            <p>
+                Each dot represents one day of my actuarially-estimated lifespan. Today is day
+                <span id="spentDaysLabel">???</span> out of about <span id="totalDaysLabel">???</span>.
+            </p>
+            <p>If my expected lifetime were one year, today would be <span id="lifeAsYearLabel">???</span>.</p>
+            <p>
+                I was born on <input id="birthdayInput" type="date"> and expect to live for around
+                <input id="lifeExpectancyInput" type="text" inputmode="numeric" style="width:4em">
+                years. Your results may be different.
+            </p>
+        </div>
+
+        <div class="flex-column">
+            <div id="calendarContainer">
+                <div id="calendarContainerInner">
+                    <!-- 
+                            11111111
+                            11111111
+                            11111111
+                            2222 3 4
+                            55555555
+                            55555555
+                            6666
+                         -->
+                    <div class="spent" id="days1"></div>
+                    <div class="flex">
+                        <div class="spent" id="days2"></div>
+                        <div class="today" id="days3"></div>
+                        <div class="unspent" id="days4"></div>
+                    </div>
+                    <div class="unspent" id="days5"></div>
+                    <div class="unspent" id="days6"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+<script src="./index.js"></script>
+
+</html>
